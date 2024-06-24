@@ -1,7 +1,8 @@
 <?php
-echo $_SERVER['PHP_SELF'];
-echo "<br>";
-echo $_SERVER['SERVER_NAME'];
-echo "<br>";
-echo $_SERVER['HTTP_HOST'];
+
+foreach($_SERVER as $x=>$x_value)
+   {
+   echo  $x .' => ' . $x_value;
+   echo "<br>";
+   }
 ?>
