@@ -5,13 +5,14 @@ with value = 25
  in index =3 
  with value = 10 in index =2 
  after that sort it 
- in a reverse order (highest to lowest). note: array sum avg sort reverse -->
+ in a reverse order (highest to lowest). 
+ note: array sum avg sort reverse -->
  <?php
  $arr = array();
  $arr[1] = 45;
  $arr[0] = 12;
  $arr[3] = 25;
- $arr[2] =10 ;
+ $arr[2] = 10 ;
 foreach($arr as $element)
 echo ($element.'<br>');
 echo ('sum of array is ') ;
@@ -32,7 +33,6 @@ for($x = 0; $x < $arrlength; $x++) {
   echo "reverse array";
   echo "<br>";
   rsort($arr);
-
 $clength = count($arr);
 for($k = 0; $k < $clength; $k++) {
   echo $arr[$k];
