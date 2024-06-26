@@ -13,7 +13,7 @@
     <P>
         Aplication name :AAST_BIG class registration
     </P>
-    <P style="color:red">* Required Fields.</P>
+    
 
     <form method="get" action="<?php $_php_self ?>">
         <table>
@@ -21,26 +21,25 @@
                 <tr>
                     <td class="form"> <label for="name"> name:</label></td>
                     <td>
-                        <input type="text" id="fname" name="name">
-                    </td>
-                    <?php
-                    if (!empty($_POST["name"])) {
-                        echo "<span> Required Fields </span>";
-                    }
+                        <input type="text" id="name" name="name">
+                        <?php
+                   if(empty($_GET['name'])){
+                    echo "<span style= color:red> Required Fields <span />";
+                   }
                     ?>
+                    </td>
+                    
                 </tr>
                 <tr>
-                    <td class="form"> <label for="Email">E-mail:</label></td>
+                    <td class="form"> <label for="email">E-mail:</label></td>
                     <td>
-                        <input type="text" id="Email" name="Email">
+                        <input type="text" id="email" name="email">
 
                     </td>
                     <?php
                     #2
                     //post method
-                    if (is_null($_POST["Email"])) {
-                        echo "<span style= color:red> Required Fields <span />";
-                    }
+                    
                     ?>
                 </tr>
                 <tr>
