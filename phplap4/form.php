@@ -67,6 +67,7 @@ if (isset($_POST['submit'])) {
         </table>
         <br>
         <input type="submit" name="submit" value="Submit">
+        <input type="reset" name="reset" value="cancel">
     </form>
 </body>
 </html>
