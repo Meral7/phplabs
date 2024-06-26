@@ -21,16 +21,27 @@
                 <tr>
                     <td class="form"> <label for="name"> name:</label></td>
                     <td>
-                        <input type="text" id="fname" name="name" required>
-                        <span style="color:red">*name is required</span>
+                        <input type="text" id="fname" name="name">
                     </td>
+                    <?php
+                    if (!empty($_POST["name"])) {
+                        echo "<span> Required Fields </span>";
+                    }
+                    ?>
                 </tr>
                 <tr>
-                    <td class="form"> <label for="email">E-mail:</label></td>
+                    <td class="form"> <label for="Email">E-mail:</label></td>
                     <td>
-                        <input type="text" id="email" name="email" required>
-                        <span style="color:red">*email is required</span>
+                        <input type="text" id="Email" name="Email">
+
                     </td>
+                    <?php
+                    #2
+                    //post method
+                    if (is_null($_POST["Email"])) {
+                        echo "<span style= color:red> Required Fields <span />";
+                    }
+                    ?>
                 </tr>
                 <tr>
                     <td class="form"> <label for="Group">Group :</label></td>
@@ -67,13 +78,16 @@
             </tbody>
         </table>
         <br>
-        <span style="margin-right: 70px;">agree</span> <input style="display:inline ;" name="check" type="checkbox" required>
-        <span style="color:red">*you should agree</span>
+        <span style="margin-right: 70px;">agree</span> <input style="display:inline ;" name="check" type="checkbox">
+        <?php
+        if (is_null($_POST["check"]))
+            echo '<span style="color:red">*you should agree</span>'
+        ?>
         <br>
-        <input style="display: inline;" type="submit" value="submit">
-        <button type="reset">reset</button>
+        <input style="display: inline;" type="submit" value="submit" for="check">
     </form>
 </body>
+
 <?php
 if (!empty($_GET["name"] && $_GET["email"] && $_GET["Gender"] && $_GET["check"])) {
     echo "Name: " . $_GET["name"] . "<br>";
@@ -86,4 +100,5 @@ if (!empty($_GET["name"] && $_GET["email"] && $_GET["Gender"] && $_GET["check"])
     echo "agree: " . $_GET["check"] . "<br>";
 }
 ?>
+
 </html>
